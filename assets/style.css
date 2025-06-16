@@ -1,0 +1,397 @@
+:root {
+    --primary: #167681;
+    --secondary: #f4f6f8;
+    --accent: #ffffff;
+    --text: #18333c;
+    --gray: #647c8a;
+    --shadow: 0 2px 12px rgba(22, 118, 129, 0.10);
+    --radius: 15px;
+    --transition: 0.3s;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    background: var(--secondary);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    box-shadow: var(--shadow);
+    background: var(--primary);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.6rem 1rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo {
+    height: 48px;
+    width: 48px;
+    margin-right: 0.7rem;
+}
+
+.nav-title {
+    color: var(--accent);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--accent);
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.2rem;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 1.07rem;
+    transition: color var(--transition);
+    padding: 0.5rem 0.8rem;
+    border-radius: var(--radius);
+}
+
+.nav-links li a.active,
+.nav-links li a:hover {
+    background: var(--accent);
+    color: var(--primary);
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 900px;
+    margin: 2rem auto 0 auto;
+    padding: 0 1rem 2rem 1rem;
+    background: var(--accent);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    gap: 1.7rem;
+}
+
+.hero-logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    color: var(--primary);
+}
+
+.hero h2 {
+    font-size: 1.3rem;
+    color: var(--gray);
+    font-weight: 400;
+    margin-bottom: 0.8rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: 1.2rem;
+}
+
+.countdown {
+    margin: 1.2rem 0;
+    font-size: 1.5rem;
+    color: var(--primary);
+    letter-spacing: 0.1rem;
+    font-family: 'Roboto Mono', monospace, monospace;
+    font-weight: 500;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--accent);
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.7rem 2.2rem;
+    border: none;
+    border-radius: var(--radius);
+    text-decoration: none;
+    margin-top: 1.3rem;
+    box-shadow: var(--shadow);
+    transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.cta-btn:hover {
+    background: #1a8f9c;
+    color: var(--accent);
+    transform: translateY(-2px) scale(1.04);
+}
+
+.detalhes-evento, .programacao, .inscricoes, .faq, .contato {
+    padding: 2rem 0 1rem 0;
+}
+
+.detalhes-evento h1,
+.programacao h1,
+.inscricoes h1,
+.faq h1,
+.contato h1 {
+    color: var(--primary);
+    margin-bottom: 1.2rem;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.detalhes-evento p {
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.detalhes-logo {
+    display: block;
+    margin: 2rem auto 0 auto;
+    width: 110px;
+    height: 110px;
+}
+
+.programacao h2 {
+    margin-top: 2rem;
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.programacao h2 span {
+    color: var(--gray);
+    font-size: 0.98rem;
+    font-weight: 400;
+    margin-left: 1rem;
+}
+
+.dia-programacao {
+    margin-bottom: 1.7rem;
+}
+
+.dia-programacao ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.dia-programacao ul li {
+    padding: 0.5rem 0 0.5rem 0;
+    font-size: 1.05rem;
+    border-bottom: 1px solid #e0e3e7;
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+}
+
+.dia-programacao ul li span {
+    color: var(--primary);
+    min-width: 62px;
+    font-weight: 700;
+    font-family: 'Roboto Mono', monospace, monospace;
+}
+
+.inscricoes p {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+.inscricoes .cta-btn {
+    display: block;
+    margin: 1.2rem auto 2rem auto;
+    width: fit-content;
+}
+
+.faq {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 1.7rem;
+}
+
+.faq-item h2 {
+    font-size: 1.15rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.faq-item p {
+    color: var(--text);
+    font-size: 1.07rem;
+}
+
+.contato ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.07rem;
+    margin-top: 1.2rem;
+}
+
+.contato ul li {
+    margin-bottom: 0.8rem;
+}
+
+footer {
+    background: var(--primary);
+    color: var(--accent);
+    text-align: center;
+    padding: 1.1rem 0 1.1rem 0;
+    font-size: 1rem;
+    margin-top: auto;
+    border-radius: 0 0 var(--radius) var(--radius);
+}
+
+@media (max-width: 830px) {
+    main {
+        max-width: 98vw;
+        margin: 1.2rem auto 0 auto;
+    }
+    .navbar {
+        max-width: 98vw;
+        padding: 0.6rem 0.5rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+        background: var(--primary);
+        display: none;
+    }
+    .nav-links.open {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .logo {
+        height: 38px;
+        width: 38px;
+    }
+    main {
+        margin-top: 0.8rem;
+        padding: 0.5rem 0.5rem 1.2rem 0.5rem;
+    }
+    .hero-logo {
+        width: 90px;
+        height: 90px;
+    }
+    .detalhes-logo {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    background: #f4f6f8;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 5px;
+}
+
+/* ...demais estilos acima permanecem iguais... */
+
+.agenda-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.agenda-list li {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid #e0e3e7;
+    padding: 0.7rem 0;
+    gap: 1.1rem;
+}
+
+.agenda-hora {
+    color: var(--primary);
+    min-width: 62px;
+    font-weight: 700;
+    font-family: 'Roboto Mono', monospace, monospace;
+    font-size: 1.07rem;
+    margin-top: 2px;
+}
+
+.agenda-titulo {
+    font-size: 1.09rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.agenda-palestrante {
+    font-size: 0.97rem;
+    color: var(--gray);
+    margin-top: 0.16em;
+    font-style: italic;
+    font-weight: 400;
+}
+
+@media (max-width: 650px) {
+    /* ...demais media queries... */
+    .agenda-list li {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    .agenda-hora {
+        margin-bottom: 2px;
+    }
+}
+
+/* ...demais estilos abaixo permanecem iguais... */
