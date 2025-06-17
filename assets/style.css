@@ -253,6 +253,7 @@ main {
 
 .faq-item {
     margin-bottom: 1.7rem;
+    text-align: justify;
 }
 
 .faq-item h2 {
@@ -265,6 +266,7 @@ main {
 .faq-item p {
     color: var(--text);
     font-size: 1.07rem;
+    margin-bottom: 0.5rem;
 }
 
 .contato ul {
