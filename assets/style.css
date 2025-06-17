@@ -394,4 +394,114 @@ footer {
     }
 }
 
-/* ...demais estilos abaixo permanecem iguais... */
+.comissao {
+    padding: 2rem 0 1rem 0;
+    text-align: justify;
+}
+
+.comissao h1 {
+    color: var(--primary);
+    margin-bottom: 1.2rem;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.comissao-agradecimento {
+    font-size: 1.13rem;
+    color: var(--text);
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.comissao-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.comissao-card {
+    background: var(--secondary);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.3rem 1.1rem 1.1rem 1.1rem;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.22s, box-shadow 0.22s;
+}
+
+.comissao-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 4px 16px rgba(22, 118, 129, 0.16);
+}
+
+.comissao-foto {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary);
+    margin-bottom: 1rem;
+    background: #fff;
+}
+
+.comissao-nome {
+    font-size: 1.12rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.4rem;
+    white-space: nowrap;
+}
+
+.comissao-frase {
+    font-size: 0.99rem;
+    color: var(--gray);
+    font-style: italic;
+}
+
+/* Responsivo comissão */
+@media (max-width: 800px) {
+    .comissao-cards {
+        gap: 1.2rem;
+    }
+    .comissao-card {
+        width: 180px;
+        padding: 1rem 0.5rem 1rem 0.5rem;
+    }
+}
+@media (max-width: 550px) {
+    .comissao-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .comissao-card {
+        width: 96vw;
+        max-width: 320px;
+    }
+}
+
+.faq-item a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0 1px;
+    border-radius: 3px;
+    transition: background 0.18s, color 0.18s;
+}
+
+.faq-item a:hover,
+.faq-item a:focus {
+    background: #1a8f9c;
+    color: #eaf7fa;
+    outline: none;
+}
+
+.faq-item a:active {
+    background: #1a8f9c;
+    color: #eaf7fa;
+}
+
