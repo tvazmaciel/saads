@@ -383,6 +383,18 @@ footer {
     margin-top: 0.16em;
     font-style: italic;
     font-weight: 400;
+/*    position: relative;*/
+}
+
+/*.agenda-palestrante img {
+    height: 42px; 
+    position: absolute; 
+    bottom: 0;
+}*/
+
+.agenda-palestrante a {
+    
+    color: var(--gray);
 }
 
 @media (max-width: 650px) {
