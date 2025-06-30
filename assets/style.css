@@ -392,9 +392,30 @@ footer {
     bottom: 0;
 }*/
 
-.agenda-palestrante a {
-    
+.agenda-palestrante a {    
     color: var(--gray);
+}
+
+.agenda-palestrante a img {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate( -50%, -50% );
+    z-index: 5;
+    pointer-events: auto;
+    display: none;
+    filter: brightness(0) saturate(100%) invert(37%) sepia(94%) saturate(373%) hue-rotate(141deg);      
+}
+
+@media (max-width: 768px) {
+    /* Em alguns casos, é possível que hover não funcione bem no toque */
+    .agenda-palestrante a:active img {
+      display: inline;
+    }
+  }
+
+.agenda-palestrante a:hover img {
+    display: inline;
 }
 
 @media (max-width: 650px) {
